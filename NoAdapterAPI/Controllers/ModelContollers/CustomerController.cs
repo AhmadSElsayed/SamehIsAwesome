@@ -70,7 +70,17 @@ namespace NoAdapterAPI.Controllers.ModelContollers
                 temp.Name,
                 temp.Gender,
                 temp.Age));
-                }
+        }
+
+        /// <summary>
+        /// Gets The Count in the database
+        /// </summary>
+        /// <returns>Integer</returns>
+        [HttpDelete]
+        public int Count()
+        {
+            return (int)DatabaseManager.ExecuteScalar("Select Count(*) from Customer");
+        }
 
         /// <summary>
         /// Deletes a Customer

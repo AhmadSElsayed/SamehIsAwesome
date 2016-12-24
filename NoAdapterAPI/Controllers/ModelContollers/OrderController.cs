@@ -94,6 +94,15 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         {
             return (int) DatabaseManager.ExecuteScalar(string.Format("Select Count(*) from [Order] where OrderID = {0}", OrderID)) > 0 ? true : false;
         }
+        /// <summary>
+        /// Gets The Count in the database
+        /// </summary>
+        /// <returns>Integer</returns>
+        [HttpDelete]
+        public int Count()
+        {
+            return (int)DatabaseManager.ExecuteScalar("Select Count(*) from [Order]");
+        }
 
     }
 }
