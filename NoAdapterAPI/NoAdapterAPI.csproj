@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ModelContollers\CustomerController.cs" />
     <Compile Include="Controllers\ModelContollers\EmployeeController.cs" />
     <Compile Include="Controllers\ModelContollers\OrderController.cs" />
+    <Compile Include="Controllers\ModelContollers\ProductController.cs" />
     <Compile Include="Controllers\ModelContollers\SeasonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

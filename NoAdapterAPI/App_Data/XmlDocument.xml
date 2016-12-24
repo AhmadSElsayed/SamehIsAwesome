@@ -576,6 +576,53 @@
             <param name="OrderID">OrderID to check</param>
             <returns>Boolean</returns>
         </member>
+        <member name="T:NoAdapterAPI.Controllers.ModelContollers.ProductController">
+            <summary>
+            Logic Controller for Product Class
+            </summary>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.ProductController.Get">
+            <summary>
+            Gets ALL Products from the Database
+            </summary>
+            <returns>A List of Product Objects</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.ProductController.Get(System.Int32)">
+            <summary>
+            Gets Product by Barcode
+            </summary>
+            <param name="BarCode">Product's Barcode</param>
+            <returns>Product with this Barcode or null if none exists</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.ProductController.Post(NoAdapterAPI.Models.Product)">
+            <summary>
+            Inserts a Product
+            </summary>
+            <param name="temp">Product Data</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.ProductController.Put(System.Int32,NoAdapterAPI.Models.Product)">
+            <summary>
+            Updates a Product
+            </summary>
+            <param name="BarCode">Barcode to Update</param>
+            <param name="temp">Data</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.ProductController.Delete(System.Int32)">
+            <summary>
+            Deletes a Product
+            </summary>
+            <param name="BarCode">Barcode to Delete</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.ProductController.Check(System.Int32)">
+            <summary>
+            Checks if a Product Exists
+            </summary>
+            <param name="BarCode">Product to Check</param>
+            <returns>Boolean</returns>
+        </member>
         <member name="M:NoAdapterAPI.Models.DatabaseManager.InitiateConnection">
             <summary>
             Initiates the Database Connection based on the ConnectionString Named "DatabaseAdaptedModel"
@@ -680,6 +727,56 @@
         <member name="P:NoAdapterAPI.Models.Order.DeliveryID">
             <summary>
             ID of Delivery Department/Employee (Foreign)
+            </summary>
+        </member>
+        <member name="T:NoAdapterAPI.Models.Product">
+            <summary>
+            Products' Data
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.BarCode">
+            <summary>
+            Product's Barcode....(Auto-generated)
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.Size">
+            <summary>
+            Size
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.Color">
+            <summary>
+            Color
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.Gender">
+            <summary>
+            Gender..... M or F Only
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.ProductStatus">
+            <summary>
+            Stored....OnSale.....NotAvailable only
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.Image">
+            <summary>
+            Product's Image.... Byte[]
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.CategoryID">
+            <summary>
+            Category ID
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Product.BrandName">
+            <summary>
+            Brand Name
             </summary>
         </member>
     </members>

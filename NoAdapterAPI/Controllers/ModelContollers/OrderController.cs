@@ -35,7 +35,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         [HttpGet]
         public Order Get([FromUri]int OrderID)
         {
-            var temp = DatabaseManager.ExecuteReader(string.Format("SELECT * FROM [Order] WHERE OrderID = '{0}'", OrderID));
+            var temp = DatabaseManager.ExecuteReader(string.Format("SELECT * FROM [Order] WHERE OrderID = {0}", OrderID));
             var list = Filler.FillList<Order>(temp);
             if (list.Count == 0)
                 return null;
@@ -65,7 +65,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         /// <param name="Quantity">Quantity of The Prodct</param>
         /// <returns>A number more than ZERO if successful or -1 if failed</returns>
         [HttpPut]
-        public int Put([FromBody]int OrderID, [FromBody]string Barcode, [FromBody]int Quantity)
+        public int Put([FromUri]int OrderID, [FromBody]string Barcode, [FromBody]int Quantity)
         {
             var param = new Dictionary<string, object>();
             param.Add("@ProductListID", OrderID);
@@ -81,7 +81,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         [HttpDelete]
         public int Delete([FromUri]int OrderID)
         {
-            return DatabaseManager.ExecuteNonQuery(string.Format("Delete from [Order] where OrderID = '{0}'", OrderID));
+            return DatabaseManager.ExecuteNonQuery(string.Format("Delete from [Order] where OrderID = {0}", OrderID));
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         [HttpPatch]
         public bool check([FromUri]int OrderID)
         {
-            return (int) DatabaseManager.ExecuteScalar(string.Format("Select Count(*) from [Order] where OrderID = '{0}'", OrderID)) > 0 ? true : false;
+            return (int) DatabaseManager.ExecuteScalar(string.Format("Select Count(*) from [Order] where OrderID = {0}", OrderID)) > 0 ? true : false;
         }
 
     }
