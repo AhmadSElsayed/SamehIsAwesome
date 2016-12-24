@@ -672,6 +672,12 @@
             <param name="temp">New Data</param>
             <returns>A number more than ZERO if successful or -1 if failed</returns>
         </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CustomerController.Count">
+            <summary>
+            Gets The Count in the database
+            </summary>
+            <returns>Integer</returns>
+        </member>
         <member name="M:NoAdapterAPI.Controllers.ModelContollers.CustomerController.Delete(System.Int32)">
             <summary>
             Deletes a Customer
@@ -781,6 +787,12 @@
             <param name="OrderID">OrderID to check</param>
             <returns>Boolean</returns>
         </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.OrderController.Count">
+            <summary>
+            Gets The Count in the database
+            </summary>
+            <returns>Integer</returns>
+        </member>
         <member name="T:NoAdapterAPI.Controllers.ModelContollers.ProductController">
             <summary>
             Logic Controller for Product Class
@@ -827,6 +839,12 @@
             </summary>
             <param name="BarCode">Product to Check</param>
             <returns>Boolean</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.ProductController.Count">
+            <summary>
+            Gets The Count in the database
+            </summary>
+            <returns>Integer</returns>
         </member>
         <member name="T:NoAdapterAPI.Controllers.ModelContollers.SeasonController">
             <summary>
