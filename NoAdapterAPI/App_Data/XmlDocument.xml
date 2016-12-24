@@ -481,6 +481,164 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:NoAdapterAPI.Controllers.Database.DatabaseController">
+            <summary>
+            Database Logic Controller
+            </summary>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.Database.DatabaseController.Initiate">
+            <summary>
+            Initiates The Database Connection
+            </summary>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.Database.DatabaseController.Terminate">
+            <summary>
+            Terminates The Database Connection
+            </summary>
+            <returns>Nothing</returns>
+        </member>
+        <member name="T:NoAdapterAPI.Controllers.ModelContollers.BranchController">
+            <summary>
+            Logic Controller for Branch class
+            </summary>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchController.Get">
+            <summary>
+            Gets ALL Branches from the Database
+            </summary>
+            <returns>a List of Branches</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchController.Get(System.Int32)">
+            <summary>
+            Gets a Branch with a specific Name
+            </summary>
+            <param name="BranchID"></param>
+            <returns>Branch with this Name or null if none exists</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchController.Post(NoAdapterAPI.Models.Branch)">
+            <summary>
+            Adds a Branch
+            </summary>
+            <param name="temp">Branch Data to Add</param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchController.Put(System.Int32,NoAdapterAPI.Models.Branch)">
+            <summary>
+            Edits a Branch with This Name
+            </summary>
+            <param name="BranchID">Branch Name</param>
+            <param name="temp">Branch Data</param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchController.Delete(System.Int32)">
+            <summary>
+            Delets a Branch with This Name
+            </summary>
+            <param name="BranchID"></param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchController.Check(System.Int32)">
+            <summary>
+            Checks if a Branch exists
+            </summary>
+            <param name="BranchID">Branch Name</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="T:NoAdapterAPI.Controllers.ModelContollers.BrandController">
+            <summary>
+            Logic Controller for Brand class
+            </summary>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BrandController.Get">
+            <summary>
+            Gets ALL Brands from the Database
+            </summary>
+            <returns>a List of Brands</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BrandController.Get(System.String)">
+            <summary>
+            Gets Brand with a specific Name
+            </summary>
+            <param name="BrandName"></param>
+            <returns>Brand with this Name or null if none exists</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BrandController.Post(NoAdapterAPI.Models.Brand)">
+            <summary>
+            Adds a Brand
+            </summary>
+            <param name="temp">Brand Data to Add</param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BrandController.Put(System.String,NoAdapterAPI.Models.Brand)">
+            <summary>
+            Edits a Brand with This Name
+            </summary>
+            <param name="BrandName">Brand Name</param>
+            <param name="temp">Brand Data</param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BrandController.Delete(System.String)">
+            <summary>
+            Delets a Brand with This Name
+            </summary>
+            <param name="BrandName"></param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BrandController.Check(System.String)">
+            <summary>
+            Checks if a Brand exists
+            </summary>
+            <param name="BrandName">Brand Name</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="T:NoAdapterAPI.Controllers.ModelContollers.CategoryController">
+            <summary>
+            Logic Controller for Category class
+            </summary>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CategoryController.Get">
+            <summary>
+            Gets ALL Categories from the Database
+            </summary>
+            <returns>a List of Categories</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CategoryController.Get(System.Int32)">
+            <summary>
+            Gets Category with a specific Name
+            </summary>
+            <param name="CategoryID"></param>
+            <returns>Category with this Name or null if none exists</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CategoryController.Post(NoAdapterAPI.Models.Category)">
+            <summary>
+            Adds a Category
+            </summary>
+            <param name="temp">Category Data to Add</param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CategoryController.Put(System.Int32,NoAdapterAPI.Models.Category)">
+            <summary>
+            Edits a Category with This Name
+            </summary>
+            <param name="CategoryID">Category Name</param>
+            <param name="temp">Category Data</param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CategoryController.Delete(System.Int32)">
+            <summary>
+            Delets a Category with This Name
+            </summary>
+            <param name="CategoryID"></param>
+            <returns>A number more than ZERO if successful and -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CategoryController.Check(System.Int32)">
+            <summary>
+            Checks if a Category exists
+            </summary>
+            <param name="CategoryID">Category Name</param>
+            <returns>Boolean</returns>
+        </member>
         <member name="T:NoAdapterAPI.Controllers.ModelContollers.CustomerController">
             <summary>
             Logic Controller for Customer Class
@@ -516,7 +674,7 @@
         </member>
         <member name="M:NoAdapterAPI.Controllers.ModelContollers.CustomerController.Delete(System.Int32)">
             <summary>
-            NOT WORKING YET....>FIX DATABASE
+            Deletes a Customer
             </summary>
             <param name="CustomerID"></param>
             <returns></returns>
@@ -527,6 +685,53 @@
             </summary>
             <param name="CustomerID">ID to Check</param>
             <returns>Boolean</returns>
+        </member>
+        <member name="T:NoAdapterAPI.Controllers.ModelContollers.EmployeeController">
+            <summary>
+            Logic Controller for Employee Class
+            </summary>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.EmployeeController.Get">
+            <summary>
+            Gets ALL Employees from the Database
+            </summary>
+            <returns>A List of Employee Objects</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.EmployeeController.Get(System.Int32)">
+            <summary>
+            Gets an Employee with This ID
+            </summary>
+            <param name="EmployeeID">Employee ID</param>
+            <returns>Employee with this ID or null if none exists</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.EmployeeController.Post(NoAdapterAPI.Models.Employee)">
+            <summary>
+            Adds an Employee to the Database
+            </summary>
+            <param name="temp">Employee Data to Add</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.EmployeeController.Put(System.Int32,NoAdapterAPI.Models.Employee)">
+            <summary>
+            Updates an Employee
+            </summary>
+            <param name="EmployeeID">EmployeeId to Update</param>
+            <param name="temp">Employee Data</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.EmployeeController.Delete(System.Int32)">
+            <summary>
+            Deletes an Employee
+            </summary>
+            <param name="EmployeeID">ID to Delete</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.EmployeeController.Check(System.Int32)">
+            <summary>
+            Checks if an Employee Exists
+            </summary>
+            <param name="EmployeeID">Employee ID to Delete</param>
+            <returns></returns>
         </member>
         <member name="T:NoAdapterAPI.Controllers.ModelContollers.OrderController">
             <summary>
@@ -551,14 +756,14 @@
             Starts a new Order //Note: This Only Starts the Order.... to add Products, Call the PUT method.
             </summary>
             <param name="temp">Order data from the Request Body</param>
-            <returns>A number more than ZERO if successful or -1 if failed</returns>
+            <returns>Order ID to add Products to</returns>
         </member>
-        <member name="M:NoAdapterAPI.Controllers.ModelContollers.OrderController.Put(System.Int32,System.String,System.Int32)">
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.OrderController.Put(System.Int32,System.Int32,System.Int32)">
             <summary>
             Adds a Product to an Order
             </summary>
             <param name="OrderID">Order ID to add the Product to</param>
-            <param name="Barcode">Product Barcode</param>
+            <param name="BarCode">Product Barcode</param>
             <param name="Quantity">Quantity of The Prodct</param>
             <returns>A number more than ZERO if successful or -1 if failed</returns>
         </member>
@@ -623,6 +828,53 @@
             <param name="BarCode">Product to Check</param>
             <returns>Boolean</returns>
         </member>
+        <member name="T:NoAdapterAPI.Controllers.ModelContollers.SeasonController">
+            <summary>
+            Logic Controller for Season Class
+            </summary>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.SeasonController.Get">
+            <summary>
+            Gets ALL Seasons from the Database
+            </summary>
+            <returns>A List of Season Objects</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.SeasonController.Get(System.String)">
+            <summary>
+            Gets the Season with this ID
+            </summary>
+            <param name="SeasonName">Season Name</param>
+            <returns>Season Object with this ID or null if none exists</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.SeasonController.Post(NoAdapterAPI.Models.Season)">
+            <summary>
+            Adds a Season
+            </summary>
+            <param name="temp">Season data to add</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.SeasonController.Put(System.String,NoAdapterAPI.Models.Season)">
+            <summary>
+            Edits a Season
+            </summary>
+            <param name="SeasonName">Season Name to Edit</param>
+            <param name="temp">Season Data</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.SeasonController.Delete(System.String)">
+            <summary>
+            Deletes a Season
+            </summary>
+            <param name="SeasonName">Season Name to Delete</param>
+            <returns>A number more than ZERO if successful or -1 if failed</returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.SeasonController.check(System.String)">
+            <summary>
+            Checks if a Season exists or not
+            </summary>
+            <param name="SeasonName">Season Name to Check</param>
+            <returns>Boolean</returns>
+        </member>
         <member name="M:NoAdapterAPI.Models.DatabaseManager.InitiateConnection">
             <summary>
             Initiates the Database Connection based on the ConnectionString Named "DatabaseAdaptedModel"
@@ -658,6 +910,66 @@
             Closes The SQL Server Connection
             </summary>
             <returns>A Boolean to indicate if Connection Termination Succeded</returns>
+        </member>
+        <member name="T:NoAdapterAPI.Models.Branch">
+            <summary>
+            Branch Entity
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Branch.BranchID">
+            <summary>
+            Branch ID
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Branch.Sales">
+            <summary>
+            Branch Yearly Sales
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Branch.Profit">
+            <summary>
+            Branch Annual Profit
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Branch.ProductListID">
+            <summary>
+            Productss in the Branch
+            </summary>
+        </member>
+        <member name="T:NoAdapterAPI.Models.Brand">
+            <summary>
+            Product's Brand
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Brand.BrandName">
+            <summary>
+            Brand's Official Name (20)
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Brand.GenderSales">
+            <summary>
+            M, F or B only
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Brand.Description">
+            <summary>
+            a 100-char Description
+            </summary>
+        </member>
+        <member name="T:NoAdapterAPI.Models.Category">
+            <summary>
+            Categories
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Category.CategoryID">
+            <summary>
+            Category ID (Auto-generated)
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Category.CategoryName">
+            <summary>
+            Name of The Category
+            </summary>
         </member>
         <member name="T:NoAdapterAPI.Models.Customer">
             <summary>
@@ -697,6 +1009,71 @@
         <member name="P:NoAdapterAPI.Models.Customer.Age">
             <summary>
             Age
+            </summary>
+        </member>
+        <member name="T:NoAdapterAPI.Models.Employee">
+            <summary>
+            Employee Class
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.EmployeeID">
+            <summary>
+            EmployeeID (Auto-generated)
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.SSN">
+            <summary>
+            SSN
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.Name">
+            <summary>
+            Employee Full Name
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.Gender">
+            <summary>
+            M or F only
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.BaseSalary">
+            <summary>
+            Employee Base Salary
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.Extra">
+            <summary>
+            Extra Salary
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.Classification">
+            <summary>
+            Manger, Cashier, Accountant or Delivery only
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.PhoneNumber">
+            <summary>
+            Employee Phone Number
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.Address">
+            <summary>
+            Employee Address
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.WorkingHours">
+            <summary>
+            Working Hours
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.WorkingAt">
+            <summary>
+            Working At
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Employee.SupervisorID">
+            <summary>
+            Supervisor ID
             </summary>
         </member>
         <member name="T:NoAdapterAPI.Models.Order">
@@ -777,6 +1154,26 @@
         <member name="P:NoAdapterAPI.Models.Product.BrandName">
             <summary>
             Brand Name
+            </summary>
+        </member>
+        <member name="T:NoAdapterAPI.Models.Season">
+            <summary>
+            Season Class
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Season.SeasonName">
+            <summary>
+            Season Name
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Season.StartDate">
+            <summary>
+            Start Date
+            </summary>
+        </member>
+        <member name="P:NoAdapterAPI.Models.Season.EndDate">
+            <summary>
+            End Date
             </summary>
         </member>
     </members>

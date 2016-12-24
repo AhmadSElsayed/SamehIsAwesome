@@ -46,30 +46,30 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         /// Starts a new Order //Note: This Only Starts the Order.... to add Products, Call the PUT method.
         /// </summary>
         /// <param name="temp">Order data from the Request Body</param>
-        /// <returns>A number more than ZERO if successful or -1 if failed</returns>
+        /// <returns>Order ID to add Products to</returns>
         [HttpPost]
-        public List<Order> Post([FromBody]Order temp)
+        public int Post([FromBody]Order temp)
         {
             var param = new Dictionary<string, object>();
             param.Add("Customer", temp.CustomerID);
             param.Add("WarehouseID", temp.WarehouseID);
             param.Add("Delivery", temp.DeliveryID);
-            return Filler.FillList<Order>((DataTable)DatabaseManager.ExecuteProcedure("CREATE_ORDER", param, 2));
+            return (int)DatabaseManager.ExecuteProcedure("CREATE_ORDER", param);
         }
 
         /// <summary>
         /// Adds a Product to an Order
         /// </summary>
         /// <param name="OrderID">Order ID to add the Product to</param>
-        /// <param name="Barcode">Product Barcode</param>
+        /// <param name="BarCode">Product Barcode</param>
         /// <param name="Quantity">Quantity of The Prodct</param>
         /// <returns>A number more than ZERO if successful or -1 if failed</returns>
         [HttpPut]
-        public int Put([FromUri]int OrderID, [FromBody]string Barcode, [FromBody]int Quantity)
+        public int Put([FromUri]int OrderID, [FromUri]int BarCode, [FromUri]int Quantity)
         {
             var param = new Dictionary<string, object>();
-            param.Add("@ProductListID", OrderID);
-            param.Add("@ProductBarCode", Barcode);
+            param.Add("@ProductList_ID", OrderID);
+            param.Add("@Product_BarCode", BarCode);
             param.Add("@Quantity", Quantity);
             return (int)DatabaseManager.ExecuteProcedure("Populate_ProductList", param);
         }

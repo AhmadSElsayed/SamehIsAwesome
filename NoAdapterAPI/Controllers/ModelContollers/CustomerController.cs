@@ -73,12 +73,11 @@ namespace NoAdapterAPI.Controllers.ModelContollers
                 }
 
         /// <summary>
-        /// NOT WORKING YET....>FIX DATABASE
+        /// Deletes a Customer
         /// </summary>
         /// <param name="CustomerID"></param>
         /// <returns></returns>
         [HttpDelete]
-        // DELETE api/<controller>/5
         public int Delete([FromUri]int CustomerID)
         {
             return DatabaseManager.ExecuteNonQuery(string.Format("Delete from Customer where CustomerID = '{0}'", CustomerID));

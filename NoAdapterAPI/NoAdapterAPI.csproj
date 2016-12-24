@@ -162,6 +162,9 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Database\DatabaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ModelContollers\BranchController.cs" />
+    <Compile Include="Controllers\ModelContollers\BrandController.cs" />
+    <Compile Include="Controllers\ModelContollers\CategoryController.cs" />
     <Compile Include="Controllers\ModelContollers\CustomerController.cs" />
     <Compile Include="Controllers\ModelContollers\EmployeeController.cs" />
     <Compile Include="Controllers\ModelContollers\OrderController.cs" />

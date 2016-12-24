@@ -4,8 +4,15 @@ using System.Web.Http;
 
 namespace NoAdapterAPI.Controllers.Database
 {
+    /// <summary>
+    /// Database Logic Controller
+    /// </summary>
     public class DatabaseController : ApiController
     {
+        /// <summary>
+        /// Initiates The Database Connection
+        /// </summary>
+        /// <returns>Nothing</returns>
         [HttpGet, Route("api/Database/Initiate")]
         public IHttpActionResult Initiate()
         {
@@ -16,6 +23,10 @@ namespace NoAdapterAPI.Controllers.Database
                 return InternalServerError(new Exception("Database Connection Failed\nCheck Log File.\nP.S. Sameh Rocks"));
         }
 
+        /// <summary>
+        /// Terminates The Database Connection
+        /// </summary>
+        /// <returns>Nothing</returns>
         [HttpGet, Route("api/Database/Terminate")]
         public IHttpActionResult Terminate()
         {
