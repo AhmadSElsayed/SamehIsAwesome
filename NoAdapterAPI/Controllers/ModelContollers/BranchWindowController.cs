@@ -14,7 +14,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
     {
   
       [HttpGet]
-        public List<ALL_BRANCH_DATA> Get([FromUri] int BranchID)
+        public List<ALL_BRANCH_DATA> Get()
         {
             var temp = DatabaseManager.ExecuteReader("Select * From ALL_BRANCH_DATA");
             return Filler.FillList<ALL_BRANCH_DATA>(temp);
