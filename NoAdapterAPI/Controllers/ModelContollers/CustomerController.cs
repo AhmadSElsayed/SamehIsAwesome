@@ -96,12 +96,17 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         /// <summary>
         /// Checks if Customer Exists
         /// </summary>
-        /// <param name="CustomerID">ID to Check</param>
+        /// <param name="Username">Customer's Username</param>
+        /// <param name="Password">Customer's Password</param>
         /// <returns>Boolean</returns>
         [HttpPatch]
-        public bool check([FromUri]string CustomerID)
+        public Customer check([FromUri]string Username, string Password)
         {
-            return (int)DatabaseManager.ExecuteScalar(string.Format("Select Count(*) from Customer where CustomerID = '{0}'", CustomerID)) > 0 ? true : false;
+            var temp = DatabaseManager.ExecuteReader(string.Format("Select * from Customer where Username ='{0}' AND Password ='{1}'", Username, Password));
+            var list = Filler.FillList<Customer>(temp);
+            if (list.Count == 0)
+                return null;
+            return list.First();
         }
     }
 }

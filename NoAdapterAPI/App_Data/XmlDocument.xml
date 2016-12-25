@@ -685,11 +685,12 @@
             <param name="CustomerID"></param>
             <returns></returns>
         </member>
-        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CustomerController.check(System.String)">
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.CustomerController.check(System.String,System.String)">
             <summary>
             Checks if Customer Exists
             </summary>
-            <param name="CustomerID">ID to Check</param>
+            <param name="Username">Customer's Username</param>
+            <param name="Password">Customer's Password</param>
             <returns>Boolean</returns>
         </member>
         <member name="T:NoAdapterAPI.Controllers.ModelContollers.EmployeeController">
