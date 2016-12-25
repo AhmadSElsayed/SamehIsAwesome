@@ -98,7 +98,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         /// </summary>
         /// <param name="Username">Customer's Username</param>
         /// <param name="Password">Customer's Password</param>
-        /// <returns>Boolean</returns>
+        /// <returns>Customer Matching this Username and Password or null if none exist</returns>
         [HttpPatch]
         public Customer check([FromUri]string Username, string Password)
         {

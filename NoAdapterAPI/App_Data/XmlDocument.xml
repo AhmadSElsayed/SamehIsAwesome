@@ -691,7 +691,7 @@
             </summary>
             <param name="Username">Customer's Username</param>
             <param name="Password">Customer's Password</param>
-            <returns>Boolean</returns>
+            <returns>Customer Matching this Username and Password or null if none exist</returns>
         </member>
         <member name="T:NoAdapterAPI.Controllers.ModelContollers.EmployeeController">
             <summary>
