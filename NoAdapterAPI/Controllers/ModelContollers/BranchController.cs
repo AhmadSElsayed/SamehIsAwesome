@@ -82,7 +82,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         {
             return DatabaseManager.ExecuteNonQuery(string.Format("Delete from Branch where BranchID = {0}", BranchID));
         }
-
+       
         /// <summary>
         /// Checks if a Branch exists
         /// </summary>

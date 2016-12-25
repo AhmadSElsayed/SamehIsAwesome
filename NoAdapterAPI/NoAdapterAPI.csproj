@@ -49,6 +49,14 @@
       <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -163,6 +171,7 @@
     <Compile Include="Controllers\Database\DatabaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ModelContollers\BranchController.cs" />
+    <Compile Include="Controllers\ModelContollers\BranchWindowController.cs" />
     <Compile Include="Controllers\ModelContollers\BrandController.cs" />
     <Compile Include="Controllers\ModelContollers\CategoryController.cs" />
     <Compile Include="Controllers\ModelContollers\CustomerController.cs" />
@@ -173,8 +182,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Scaffolded View\ALL_BRANCH_DATA.cs" />
+    <Compile Include="Models\Scaffolded View\ALL_CUSTOMER_DATA.cs" />
+    <Compile Include="Models\Scaffolded View\ALL_DELIVERY_DATA.cs" />
+    <Compile Include="Models\Scaffolded View\ALL_WAREHOUSE_DATA.cs" />
+    <Compile Include="Models\Scaffolded View\COUNT_OF_CUSTOMER_ORDERS.cs" />
+    <Compile Include="Models\Scaffolded View\COUNT_PRODUCT_BRANCH.cs" />
+    <Compile Include="Models\Scaffolded View\COUNT_PRODUCT_WAREHOUSE.cs" />
     <Compile Include="Models\DatabaseManager.cs" />
+    <Compile Include="Models\Scaffolded View\database_firewall_rules.cs" />
+    <Compile Include="Models\Scaffolded View\EMPLOYEE_WORKING_IN_WORKING_PLACE.cs" />
     <Compile Include="Models\Fillers\Filler.cs" />
+    <Compile Include="Models\Scaffolded View\NUMBER_OF_EMPLOYEE_IN_WORKING_PLACE.cs" />
+    <Compile Include="Models\Scaffolded View\PRODUCTS_IN_BRANCH.cs" />
+    <Compile Include="Models\Scaffolded View\PRODUCTS_IN_WAREHOUSE.cs" />
     <Compile Include="Models\Scaffolded Model\Branch.cs" />
     <Compile Include="Models\Scaffolded Model\Brand.cs" />
     <Compile Include="Models\Scaffolded Model\Category.cs" />

@@ -545,6 +545,34 @@
             <param name="BranchID">Branch Name</param>
             <returns>Boolean</returns>
         </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchWindowController.Get(System.Int32)">
+            <summary>
+            ALL BRANCH DATA
+            </summary>
+            <param name="BranchID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchWindowController.Post(System.Int32)">
+            <summary>
+            Products in Branch
+            </summary>
+            <param name="BranchID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchWindowController.Put(System.Int32)">
+            <summary>
+            Employee Working Place ID
+            </summary>
+            <param name="WorkingPlaceID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NoAdapterAPI.Controllers.ModelContollers.BranchWindowController.Delete(System.Int32)">
+            <summary>
+            Count
+            </summary>
+            <param name="BranchID"></param>
+            <returns>Product, Employee</returns>
+        </member>
         <member name="T:NoAdapterAPI.Controllers.ModelContollers.BrandController">
             <summary>
             Logic Controller for Brand class
