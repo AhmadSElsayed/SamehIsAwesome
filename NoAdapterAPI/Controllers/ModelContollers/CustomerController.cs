@@ -94,7 +94,7 @@ namespace NoAdapterAPI.Controllers.ModelContollers
         }
 
         /// <summary>
-        /// Checks if Customer Exists
+        /// Gets Customer based on Username and Password
         /// </summary>
         /// <param name="Username">Customer's Username</param>
         /// <param name="Password">Customer's Password</param>

@@ -687,7 +687,7 @@
         </member>
         <member name="M:NoAdapterAPI.Controllers.ModelContollers.CustomerController.check(System.String,System.String)">
             <summary>
-            Checks if Customer Exists
+            Gets Customer based on Username and Password
             </summary>
             <param name="Username">Customer's Username</param>
             <param name="Password">Customer's Password</param>
