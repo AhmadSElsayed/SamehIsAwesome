@@ -12,7 +12,15 @@ namespace NoAdapterAPI.Controllers.ModelContollers
     [RoutePrefix("api/BranchWindow")]
     public class BranchWindowController : ApiController
     {
-        /// <summary>
+  
+      [HttpGet]
+        public List<ALL_BRANCH_DATA> Get([FromUri] int BranchID)
+        {
+            var temp = DatabaseManager.ExecuteReader("Select * From ALL_BRANCH_DATA");
+            return Filler.FillList<ALL_BRANCH_DATA>(temp);
+        }
+
+		/// <summary>
         /// ALL BRANCH DATA
         /// </summary>
         /// <param name="BranchID"></param>
